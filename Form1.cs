@@ -40,14 +40,21 @@ namespace Calculare_Cheltuieli_Gratar
         }
 
 
+        private void Resetare_inc(dynamic tabel)
+        {
+            tabel.IDColumn.AutoIncrementSeed = -1;
+            tabel.IDColumn.AutoIncrementStep = -1;
+            tabel.IDColumn.AutoIncrementSeed = 1;
+            tabel.IDColumn.AutoIncrementStep = 1;
+        }
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             int nr;
             Data1.DataTable1.Clear();
-            Data1.DataTable1.IDColumn.AutoIncrementSeed = -1;
-            Data1.DataTable1.IDColumn.AutoIncrementStep = -1;
-            Data1.DataTable1.IDColumn.AutoIncrementSeed = 1;
-            Data1.DataTable1.IDColumn.AutoIncrementStep = 1;
+            Resetare_inc(Data1.DataTable1);
 
             if(Regex.IsMatch(textBox1.Text , @"^\d+$"))
             {
@@ -68,15 +75,11 @@ namespace Calculare_Cheltuieli_Gratar
             }
            
        
-        }
-
+        } 
         private void reset_Click(object sender, EventArgs e)
         {
             Data1.DataTable1.Rows.Clear();
-            Data1.DataTable1.IDColumn.AutoIncrementSeed = -1;
-            Data1.DataTable1.IDColumn.AutoIncrementStep = -1;
-            Data1.DataTable1.IDColumn.AutoIncrementSeed = 1;
-            Data1.DataTable1.IDColumn.AutoIncrementStep = 1;
+            Resetare_inc(Data1.DataTable1);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -87,10 +90,7 @@ namespace Calculare_Cheltuieli_Gratar
                 int.TryParse(textBox2.Text,out nr);
                 Data1.Preferinte.Clear();
                 Data1.Piata.Clear();
-                Data1.Preferinte.IDColumn.AutoIncrementSeed = -1;
-                Data1.Preferinte.IDColumn.AutoIncrementStep = -1;
-                Data1.Preferinte.IDColumn.AutoIncrementSeed = 1;
-                Data1.Preferinte.IDColumn.AutoIncrementStep = 1;
+                Resetare_inc(Data1.Preferinte);
                 adauga_randuri_tab1(nr);
                 D2.DataSource = Data1.Preferinte;
                 Data1.Piata.Rows.Add(0, 0, 0);
@@ -118,10 +118,7 @@ namespace Calculare_Cheltuieli_Gratar
         private void reset2_Click(object sender, EventArgs e)
         {
             Data1.Preferinte.Rows.Clear();
-            Data1.Preferinte.IDColumn.AutoIncrementSeed = -1;
-            Data1.Preferinte.IDColumn.AutoIncrementStep = -1;
-            Data1.Preferinte.IDColumn.AutoIncrementSeed = 1;
-            Data1.Preferinte.IDColumn.AutoIncrementStep = 1;
+            Resetare_inc(Data1.Preferinte);
         }
 
         async Task<float> Calculator(int nr, string alegere, int i)
