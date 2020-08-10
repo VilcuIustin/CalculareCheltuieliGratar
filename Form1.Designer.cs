@@ -129,6 +129,7 @@
             this.D1.AllowUserToDeleteRows = false;
             this.D1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.D1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.D1.BackgroundColor = System.Drawing.Color.MediumAquamarine;
             this.D1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -161,6 +162,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.D1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.D1.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.MediumAquamarine;
             this.D1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.D1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -171,9 +173,10 @@
             // 
             this.D2.AllowUserToAddRows = false;
             this.D2.AllowUserToDeleteRows = false;
-            this.D2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.D2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.D2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.D2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.D2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.D2.BackgroundColor = System.Drawing.Color.MediumAquamarine;
             this.D2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -199,6 +202,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.D2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.D2.RowHeadersVisible = false;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.MediumAquamarine;
             this.D2.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.D2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -247,7 +251,7 @@
             this.D3.AllowUserToDeleteRows = false;
             this.D3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.D3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.D3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.D3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.D3.BackgroundColor = System.Drawing.Color.MediumAquamarine;
             this.D3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -273,6 +277,7 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.D3.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.D3.RowHeadersVisible = false;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.MediumAquamarine;
             this.D3.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.D3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;

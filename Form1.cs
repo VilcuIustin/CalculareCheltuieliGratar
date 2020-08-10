@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
 
+
 namespace Calculare_Cheltuieli_Gratar
 {
     public partial class Calculator_Gratar : Form
@@ -69,10 +70,7 @@ namespace Calculare_Cheltuieli_Gratar
             {
                 MessageBox.Show("Nu ai introdus un numar! Te rog sa mai incerci.");
             }
-            for(int i = 0; i < D1.Columns.Count; i++)
-            {
-                D1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
+           
            
        
         } 
@@ -95,14 +93,7 @@ namespace Calculare_Cheltuieli_Gratar
                 D2.DataSource = Data1.Preferinte;
                 Data1.Piata.Rows.Add(0, 0, 0);
                 D3.DataSource = Data1.Piata;
-                for (int i = 0; i < D2.Columns.Count; i++)
-                {
-                    D2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
-                for (int i = 0; i < D3.Columns.Count; i++)
-                {
-                    D3.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
+                
             }
             else
             {
@@ -121,10 +112,10 @@ namespace Calculare_Cheltuieli_Gratar
             Resetare_inc(Data1.Preferinte);
         }
 
-        async Task<float> Calculator(int nr, string alegere, int i)
+        async Task<double> Calculator(int nr, string alegere, int i)
         {
             DataRowCollection dr = Data1.Piata.Rows;
-            float rezultat = Convert.ToSingle(dr[0][i])/ Convert.ToSingle(nr);
+            double rezultat = Convert.ToDouble(dr[0][i])/ Convert.ToDouble(nr);
            
           
             return rezultat;
@@ -155,11 +146,11 @@ namespace Calculare_Cheltuieli_Gratar
           
         }
 
-        async void Calculare_pret_persoana(float mancare, float bere, float altele)
+        async void Calculare_pret_persoana(double mancare, double bere, double altele)
         {
             foreach(DataRow dr in Data1.Preferinte.Rows)
             {
-                float suma = 0;
+                double suma = 0;
                 if (dr.Field<bool>("Mancare"))
                 {
                     suma += mancare;
@@ -172,7 +163,7 @@ namespace Calculare_Cheltuieli_Gratar
                 {
                     suma += altele;
                 }
-                dr.SetField<float>("Pret total", suma);
+                dr.SetField<double>("Pret total", Math.Round(suma));
 
             }
         }
@@ -185,9 +176,9 @@ namespace Calculare_Cheltuieli_Gratar
                 {
                     if (dr1.Field<string>("Nume") == dr.Field<string>("Nume"))
                     {
-                        float rezultat = dr1.Field<float>("Suma") - dr.Field<float>("Pret total");
+                        double rezultat = dr1.Field<double>("Suma") - dr.Field<double>("Pret total");
                         Console.WriteLine(rezultat);
-                        dr1.SetField<float>("Suma de primit", rezultat);
+                        dr1.SetField<double>("Suma de primit", Math.Round(rezultat));
                         break;
                     }
                 }
@@ -230,20 +221,7 @@ namespace Calculare_Cheltuieli_Gratar
                 D2.DataSource = Data1.Preferinte;
                 D3.DataSource = Data1.Piata;
                 D1.DataSource = Data1.DataTable1;
-
-                for (int i = 0; i < D1.Columns.Count; i++)
-                {
-                    D1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
-                for (int i = 0; i < D2.Columns.Count; i++)
-                {
-                    D2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
-                for (int i = 0; i < D3.Columns.Count; i++)
-                {
-                    D3.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
-
+ 
 
             }
             else

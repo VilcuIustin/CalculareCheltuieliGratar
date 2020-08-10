@@ -459,7 +459,7 @@ namespace Calculare_Cheltuieli_Gratar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string Nume, float Suma, float Suma_de_primit) {
+            public DataTable1Row AddDataTable1Row(string Nume, double Suma, double Suma_de_primit) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -501,9 +501,9 @@ namespace Calculare_Cheltuieli_Gratar {
                 base.Columns.Add(this.columnID);
                 this.columnNume = new global::System.Data.DataColumn("Nume", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNume);
-                this.columnSuma = new global::System.Data.DataColumn("Suma", typeof(float), null, global::System.Data.MappingType.Element);
+                this.columnSuma = new global::System.Data.DataColumn("Suma", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSuma);
-                this.columnSuma_de_primit = new global::System.Data.DataColumn("Suma de primit", typeof(float), null, global::System.Data.MappingType.Element);
+                this.columnSuma_de_primit = new global::System.Data.DataColumn("Suma de primit", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSuma_de_primit);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("DataTable1Key11", new global::System.Data.DataColumn[] {
                                 this.columnID}, false));
@@ -774,7 +774,7 @@ namespace Calculare_Cheltuieli_Gratar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PreferinteRow AddPreferinteRow(string Nume, bool Mancare, bool Bere, bool _Wiskey_Altele, float Pret_total) {
+            public PreferinteRow AddPreferinteRow(string Nume, bool Mancare, bool Bere, bool _Wiskey_Altele, double Pret_total) {
                 PreferinteRow rowPreferinteRow = ((PreferinteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -828,7 +828,7 @@ namespace Calculare_Cheltuieli_Gratar {
                 this._columnWiskey_Altele.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnWiskey_Altele");
                 this._columnWiskey_Altele.ExtendedProperties.Add("Generator_UserColumnName", "Wiskey/Altele");
                 base.Columns.Add(this._columnWiskey_Altele);
-                this.columnPret_total = new global::System.Data.DataColumn("Pret total", typeof(float), null, global::System.Data.MappingType.Element);
+                this.columnPret_total = new global::System.Data.DataColumn("Pret total", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPret_total);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("PreferinteKey11", new global::System.Data.DataColumn[] {
                                 this.columnID}, false));
@@ -1284,10 +1284,10 @@ namespace Calculare_Cheltuieli_Gratar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public float Suma {
+            public double Suma {
                 get {
                     try {
-                        return ((float)(this[this.tableDataTable1.SumaColumn]));
+                        return ((double)(this[this.tableDataTable1.SumaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Suma\' in table \'DataTable1\' is DBNull.", e);
@@ -1300,10 +1300,10 @@ namespace Calculare_Cheltuieli_Gratar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public float Suma_de_primit {
+            public double Suma_de_primit {
                 get {
                     try {
-                        return ((float)(this[this.tableDataTable1.Suma_de_primitColumn]));
+                        return ((double)(this[this.tableDataTable1.Suma_de_primitColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Suma de primit\' in table \'DataTable1\' is DBNull.", e);
@@ -1437,10 +1437,10 @@ namespace Calculare_Cheltuieli_Gratar {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public float Pret_total {
+            public double Pret_total {
                 get {
                     try {
-                        return ((float)(this[this.tablePreferinte.Pret_totalColumn]));
+                        return ((double)(this[this.tablePreferinte.Pret_totalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Pret total\' in table \'Preferinte\' is DBNull.", e);
